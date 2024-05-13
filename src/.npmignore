@@ -1,0 +1,35 @@
+# Ignore development files and directories
+node_modules/
+dist/
+build/
+coverage/
+
+# Ignore configuration files
+*.config.js
+*.env
+
+# Ignore source control files
+.git/
+.gitignore
+
+# Ignore build artifacts
+*.log
+*.map
+
+# Ignore test files
+__tests__/
+test/
+*.test.js
+
+# Ignore documentation files
+docs/
+
+# Ignore editor and IDE files
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+
+# Ignore miscellaneous files
+.DS_Store
+Thumbs.db
