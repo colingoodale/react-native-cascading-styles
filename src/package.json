@@ -1,6 +1,6 @@
 {
-  "name": "native-cascading-stylesheets",
-  "version": "0.0.1",
+  "name": "react-native-cascading-styles",
+  "version": "a-0.0.1",
   "description": "This is a library that mimics modern class based style packages for the web. ",
   "main": "./dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "tsc"
   },
   "author": "Colin Goodale",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/react": "^18.3.1",
     "expo": "^51.0.1",
@@ -18,5 +18,19 @@
   },
   "devDependencies": {
     "typescript": "^5.4.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colingoodale/react-native-cascading-styles.git"
+  },
+  "keywords": [
+    "[\"react-native\"",
+    "\"styles\"",
+    "\"styled-components\"",
+    "\"style-library\"]"
+  ],
+  "bugs": {
+    "url": "https://github.com/colingoodale/react-native-cascading-styles/issues"
+  },
+  "homepage": "https://github.com/colingoodale/react-native-cascading-styles#readme"
 }
