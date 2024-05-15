@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "strict": true,
+    "jsx": "react-native",
+    "noEmit": true,
+    "types": ["cypress", "node"]
+  },
+  "include": [".expo/metro/externals/**/*", "./tsconfig.json", "webpack.config.js, ./cypress.config.ts, ../node_modules/cypress"],
+}
