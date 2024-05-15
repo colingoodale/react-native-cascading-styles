@@ -1,0 +1,32 @@
+# Ignore TypeScript source files
+**/*.ts
+**/*.tsx
+
+# Ignore TypeScript build files
+**/*.js.map
+
+# Ignore configuration files
+tsconfig.json
+jest.config.js
+.babelrc
+.eslintrc.js
+
+# Ignore Git files
+.git
+.github
+.gitignore
+
+# Ignore node modules
+node_modules/
+
+# Ignore test files
+__tests__/
+
+# Ignore documentation
+/docs
+
+# Ignore IDE specific files
+.idea
+.vscode
+*.iml
+*.log
