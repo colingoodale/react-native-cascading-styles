@@ -21,3 +21,10 @@ yarn-error.log*
 # Ignore OS generated files
 .DS_Store
 Thumbs.db
+
+# Ignored Package Files
+package/node_modules
+package/dist
+
+# ignore packed files
+**/*.tgz

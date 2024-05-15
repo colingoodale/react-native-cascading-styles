@@ -30,3 +30,6 @@ __tests__/
 .vscode
 *.iml
 *.log
+
+# Ignore packed files
+**/*.tgz
