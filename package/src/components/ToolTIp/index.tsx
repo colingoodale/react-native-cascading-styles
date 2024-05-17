@@ -10,10 +10,12 @@ export interface TooltipProps {
   showOnHover?: boolean;
   persistOnHover?: boolean;
   pressRetentionOffset?: object;
-  hitSlop: object | number;
+  hitSlop?: object | number;
   delayLongPress?: number;
   containerStyle?: ViewStyle;
   toolTipTextStyle?: TextStyle;
+  backgroundColor?: string;
+  textColor?: string;
 }
 
 const Tooltip: React.FC<TooltipProps> = ({ 
@@ -28,7 +30,9 @@ const Tooltip: React.FC<TooltipProps> = ({
   hitSlop = 10,
   delayLongPress = 500,
   containerStyle = {},
-  toolTipTextStyle = {}, 
+  toolTipTextStyle = {},
+  backgroundColor = 'rgba(236,236,236,0.9)',
+  textColor = 'white', 
 }) => {
   const [visible, setVisible] = useState(false);
 
@@ -53,8 +57,8 @@ const Tooltip: React.FC<TooltipProps> = ({
       return React.cloneElement(customTooltip, { onPress: onTooltipPress });
     }
     return (
-      <View style={[styles.tooltip, tooltipStyle]}>
-        <Text style={[styles.toolTipText, toolTipTextStyle]}>{content}</Text>
+      <View style={[styles.tooltip, {backgroundColor}, tooltipStyle]}>
+        <Text style={[{color: textColor}, toolTipTextStyle]}>{content}</Text>
       </View>
     );
   };
@@ -83,13 +87,10 @@ const styles = StyleSheet.create({
   },
   tooltip: {
     position: 'absolute',
-    backgroundColor: 'rgba(0,0,0,0.7)',
+    top: -40,
     padding: 10,
     borderRadius: 5,
     zIndex: 1000,
-  },
-  toolTipText: {
-    color: 'black',
   }
 });
 

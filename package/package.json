@@ -1,6 +1,6 @@
 {
   "name": "react-native-cascading-styles",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a StyleSheet library that provides users with a StyleLibrary that mimics modern class based styles with CSS. This package also delivers a 'barely styled' component library, built with the same cascading style \"classes\".",
   "main": "dist/index.js",
   "scripts": {
