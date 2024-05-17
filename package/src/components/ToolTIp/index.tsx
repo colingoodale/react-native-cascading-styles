@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from 'react';
 import { View, Text, StyleSheet, Pressable, ViewStyle, TextStyle } from 'react-native';
 
-interface TooltipProps {
+export interface TooltipProps {
   children: React.ReactNode;
   content?: string;
-  customContent?: React.ReactElement;
+  customTooltip?: React.ReactElement;
   tooltipStyle?: ViewStyle;
   trigger?: 'onPress' | 'onLongPress';
   showOnHover?: boolean;
@@ -19,7 +19,7 @@ interface TooltipProps {
 const Tooltip: React.FC<TooltipProps> = ({ 
   children, 
   content = '', 
-  customContent = null, 
+  customTooltip = null, 
   tooltipStyle = {}, 
   trigger = 'onLongPress', 
   showOnHover = true, 
@@ -49,8 +49,8 @@ const Tooltip: React.FC<TooltipProps> = ({
   }, [persistOnHover, visible]);
 
   const renderTooltipContent = () => {
-    if (customContent) {
-      return React.cloneElement(customContent, { onPress: onTooltipPress });
+    if (customTooltip) {
+      return React.cloneElement(customTooltip, { onPress: onTooltipPress });
     }
     return (
       <View style={[styles.tooltip, tooltipStyle]}>
