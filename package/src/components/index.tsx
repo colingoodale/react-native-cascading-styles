@@ -1,5 +1,5 @@
 export { default as Button } from './Button';
-export { default as TextInput } from './TextInput';
+export { default as NativeTextInput } from './NativeTextInput';
 
 export type { ButtonProps } from './Button';
-export type { TextInputProps } from './TextInput';
+export type { TextInputProps } from './NativeTextInput';

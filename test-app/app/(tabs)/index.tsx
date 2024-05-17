@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Platform } from 'react-native';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { Button, StyleLibrary } from 'react-native-cascading-styles'
+import { Button, NativeTextInput, StyleLibrary } from 'react-native-cascading-styles'
 
 const localStyles = StyleSheet.create({
   buttonText: {
@@ -24,6 +24,15 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+      <NativeTextInput
+        style={[StyleLibrary.borderM, { borderColor: 'black' }]}
+        placeholder="Enter your name"
+        required={true}
+        requiredMessage="This field is required"
+        emailValidation={true}
+        errorColor='blue'
+        successColor='green'
+      />
      <Button label={"Click me"} onPress={() => console.log("Button clicked")} buttonStyle={[StyleLibrary.borderM]} textStyle={[localStyles.buttonText]} />
     </ParallaxScrollView>
   );

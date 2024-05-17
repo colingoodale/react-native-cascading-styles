@@ -1,0 +1,499 @@
+[
+    {
+      "countryCode": "US",
+      "phoneFormat": "^(\\+?1[-. ]?)?\\(?[2-9][0-9]{2}\\)?[-. ]?[2-9][0-9]{2}[-. ]?[0-9]{4}$"
+    },
+    {
+      "countryCode": "CA",
+      "phoneFormat": "^(\\+?1[-. ]?)?\\(?[2-9][0-9]{2}\\)?[-. ]?[2-9][0-9]{2}[-. ]?[0-9]{4}$"
+    },
+    {
+      "countryCode": "GB",
+      "phoneFormat": "^(\\+44?|\\(?(0044)?\\)?)[0-9]{4}([0-9]{3})?([0-9]{3})?$"
+    },
+    {
+      "countryCode": "AU",
+      "phoneFormat": "^(\\+?61[-. ]?)?\\(?0?[2-57-8]\\)?[-. ]?[0-9]{2}[-. ]?[0-9]{2}[-. ]?[0-9]{1,2}$"
+    },
+    {
+      "countryCode": "DE",
+      "phoneFormat": "^(\\+?49[\\s.-]?)?\\(?0?[1-9]\\)?[\\s.-]?[1-9](\\d{1,4}[\\s.-]?)?\\d{4,10}$"
+    },
+    {
+      "countryCode": "FR",
+      "phoneFormat": "^(\\+?33|0)[1-9](?:[.-]?\\d{2}){4}$"
+    },
+    {
+      "countryCode": "IT",
+      "phoneFormat": "^(\\+?39)?\\s?\\(?0\\d{2,3}\\)?[-\\s]?\\d{6,8}$"
+    },
+    {
+      "countryCode": "ES",
+      "phoneFormat": "^(\\+?34)?[67]\\d{8}$"
+    },
+    {
+      "countryCode": "JP",
+      "phoneFormat": "^\\d{1,4}-\\d{1,4}-\\d{4}$"
+    },
+    {
+      "countryCode": "KR",
+      "phoneFormat": "^\\d{2,3}-\\d{3,4}-\\d{4}$"
+    },
+    {
+      "countryCode": "TW",
+      "phoneFormat": "^\\d{2,3}-\\d{6,9}$"
+    },
+    {
+      "countryCode": "SG",
+      "phoneFormat": "^\\+?65\\d{8}$"
+    },
+    {
+      "countryCode": "CH",
+      "phoneFormat": "^\\+?41\\d{9}$"
+    },
+    {
+      "countryCode": "NL",
+      "phoneFormat": "^\\+?31\\d{9}$"
+    },
+    {
+      "countryCode": "SE",
+      "phoneFormat": "^\\+?46\\d{8}$"
+    },
+    {
+      "countryCode": "NO",
+      "phoneFormat": "^\\+?47\\d{8}$"
+    },
+    {
+      "countryCode": "DK",
+      "phoneFormat": "^\\+?45\\d{8}$"
+    },
+    {
+      "countryCode": "FI",
+      "phoneFormat": "^\\+?358\\d{9}$"
+    },
+    {
+      "countryCode": "AT",
+      "phoneFormat": "^\\+?43\\d{9}$"
+    },
+    {
+      "countryCode": "BE",
+      "phoneFormat": "^\\+?32\\d{8,9}$"
+    },
+    {
+      "countryCode": "IE",
+      "phoneFormat": "^\\+?353\\d{8}$"
+    },
+    {
+      "countryCode": "NZ",
+      "phoneFormat": "^\\+?64\\d{9,10}$"
+    },
+    {
+      "countryCode": "PT",
+      "phoneFormat": "^\\+?351\\d{9}$"
+    },
+    {
+      "countryCode": "GR",
+      "phoneFormat": "^\\+?30\\d{10}$"
+    },
+    {
+      "countryCode": "IL",
+      "phoneFormat": "^\\+?972\\-?\\d{3}\\-?\\d{7}$"
+    },
+    {
+      "countryCode": "MX",
+      "phoneFormat": "^\\+?52\\d{10}$"
+    },
+    {
+      "countryCode": "BR",
+      "phoneFormat": "^\\+?55\\d{11}$"
+    },
+    {
+      "countryCode": "AR",
+      "phoneFormat": "^\\+?54\\d{10}$"
+    },
+    {
+      "countryCode": "RU",
+      "phoneFormat": "^\\+?7[-. ]?(\\(?\\d{3}\\)?[-. ]?)?\\d{3}[-. ]?\\d{2}[-. ]?\\d{2}$"
+    },
+    {
+      "countryCode": "CN",
+      "phoneFormat": "^\\+?86\\s?1[345789]\\d{9}$"
+    },
+    {
+      "countryCode": "IN",
+      "phoneFormat": "^\\+?91\\d{10}$"
+    },
+    {
+      "countryCode": "ID",
+      "phoneFormat": "^\\+?62\\d{9,10}$"
+    },
+    {
+      "countryCode": "TH",
+      "phoneFormat": "^\\+?66\\d{8,9}$"
+    },
+    {
+      "countryCode": "VN",
+      "phoneFormat": "^\\+?84\\d{9,10}$"
+    },
+    {
+      "countryCode": "TR",
+      "phoneFormat": "^\\+?90\\d{10,11}$"
+    },
+    {
+      "countryCode": "PH",
+      "phoneFormat": "^\\+?63\\d{10}$"
+    },
+    {
+      "countryCode": "ZA",
+      "phoneFormat": "^\\+?27\\d{9}$"
+    },
+    {
+      "countryCode": "SA",
+      "phoneFormat": "^\\+?966\\d{9}$"
+    },
+    {
+      "countryCode": "AE",
+      "phoneFormat": "^\\+?971\\d{9}$"
+    },
+    {
+      "countryCode": "MY",
+      "phoneFormat": "^\\+?60\\d{10,11}$"
+    },
+    {
+      "countryCode": "PL",
+      "phoneFormat": "^\\+?48\\d{9}$"
+    },
+    {
+      "countryCode": "HU",
+      "phoneFormat": "^\\+?36\\d{9}$"
+    },
+    {
+      "countryCode": "CZ",
+      "phoneFormat": "^\\+?420\\d{9}$"
+    },
+    {
+      "countryCode": "RO",
+      "phoneFormat": "^\\+?40\\d{9}$"
+    },
+    {
+      "countryCode": "CL",
+      "phoneFormat": "^\\+?56\\d{8}$"
+    },
+    {
+      "countryCode": "CO",
+      "phoneFormat": "^\\+?57\\d{10}$"
+    },
+    {
+      "countryCode": "GR",
+      "phoneFormat": "^\\+?30\\d{10}$"
+    },
+    {
+      "countryCode": "ZA",
+      "phoneFormat": "^\\+?27\\d{9}$"
+    },
+    {
+      "countryCode": "PT",
+      "phoneFormat": "^\\+?351\\d{9}$"
+    },
+    {
+      "countryCode": "UA",
+      "phoneFormat": "^\\+?380\\d{9}$"
+    },
+    {
+      "countryCode": "NG",
+      "phoneFormat": "^\\+?234\\d{10}$"
+    },
+    {
+      "countryCode": "KE",
+      "phoneFormat": "^\\+?254\\d{9}$"
+    },
+    {
+      "countryCode": "EG",
+      "phoneFormat": "^\\+?20\\d{10,11}$"
+    },
+    {
+      "countryCode": "PK",
+      "phoneFormat": "^\\+?92\\d{10}$"
+    },
+    {
+      "countryCode": "BD",
+      "phoneFormat": "^\\+?880\\d{10}$"
+    },
+    {
+      "countryCode": "LK",
+      "phoneFormat": "^\\+?94\\d{9}$"
+    },
+    {
+      "countryCode": "MM",
+      "phoneFormat": "^\\+?95\\d{9}$"
+    },
+    {
+      "countryCode": "IQ",
+      "phoneFormat": "^\\+?964\\d{10}$"
+    },
+    {
+      "countryCode": "SY",
+      "phoneFormat": "^\\+?963\\d{9}$"
+    },
+    {
+      "countryCode": "JO",
+      "phoneFormat": "^\\+?962\\d{10}$"
+    },
+    {
+      "countryCode": "LB",
+      "phoneFormat": "^\\+?961\\d{7,8}$"
+    },
+    {
+      "countryCode": "YE",
+      "phoneFormat": "^\\+?967\\d{9}$"
+    },
+    {
+      "countryCode": "KW",
+      "phoneFormat": "^\\+?965\\d{7}$"
+    },
+    {
+      "countryCode": "BH",
+      "phoneFormat": "^\\+?973\\d{8}$"
+    },
+    {
+      "countryCode": "QA",
+      "phoneFormat": "^\\+?974\\d{7,8}$"
+    },
+    {
+      "countryCode": "OM",
+      "phoneFormat": "^\\+?968\\d{8}$"
+    },
+    {
+      "countryCode": "AE",
+      "phoneFormat": "^\\+?971\\d{9}$"
+    },
+    {
+      "countryCode": "DZ",
+      "phoneFormat": "^\\+?213\\d{9}$"
+    },
+    {
+      "countryCode": "MA",
+      "phoneFormat": "^\\+?212\\d{9}$"
+    },
+    {
+      "countryCode": "TN",
+      "phoneFormat": "^\\+?216\\d{8,9}$"
+    },
+    {
+      "countryCode": "LY",
+      "phoneFormat": "^\\+?218\\d{8,9}$"
+    },
+    {
+      "countryCode": "GM",
+      "phoneFormat": "^\\+?220\\d{7}$"
+    },
+    {
+      "countryCode": "SN",
+      "phoneFormat": "^\\+?221\\d{9}$"
+    },
+    {
+      "countryCode": "ML",
+      "phoneFormat": "^\\+?223\\d{7,9}$"
+    },
+    {
+      "countryCode": "GN",
+      "phoneFormat": "^\\+?224\\d{7,9}$"
+    },
+    {
+      "countryCode": "CI",
+      "phoneFormat": "^\\+?225\\d{8}$"
+    },
+    {
+      "countryCode": "BF",
+      "phoneFormat": "^\\+?226\\d{7}$"
+    },
+    {
+      "countryCode": "NE",
+      "phoneFormat": "^\\+?227\\d{7}$"
+    },
+    {
+      "countryCode": "TG",
+      "phoneFormat": "^\\+?228\\d{7}$"
+    },
+    {
+      "countryCode": "BJ",
+      "phoneFormat": "^\\+?229\\d{7}$"
+    },
+    {
+      "countryCode": "MU",
+      "phoneFormat": "^\\+?230\\d{7}$"
+    },
+    {
+      "countryCode": "LR",
+      "phoneFormat": "^\\+?231\\d{7}$"
+    },
+    {
+      "countryCode": "SL",
+      "phoneFormat": "^\\+?232\\d{7}$"
+    },
+    {
+      "countryCode": "GH",
+      "phoneFormat": "^\\+?233\\d{9}$"
+    },
+    {
+      "countryCode": "NG",
+      "phoneFormat": "^\\+?234\\d{10}$"
+    },
+    {
+      "countryCode": "TD",
+      "phoneFormat": "^\\+?235\\d{6}$"
+    },
+    {
+      "countryCode": "CF",
+      "phoneFormat": "^\\+?236\\d{8}$"
+    },
+    {
+      "countryCode": "CM",
+      "phoneFormat": "^\\+?237\\d{7,8}$"
+    },
+    {
+      "countryCode": "CV",
+      "phoneFormat": "^\\+?238\\d{7}$"
+    },
+    {
+      "countryCode": "ST",
+      "phoneFormat": "^\\+?239\\d{7}$"
+    },
+    {
+      "countryCode": "GQ",
+      "phoneFormat": "^\\+?240\\d{6}$"
+    },
+    {
+      "countryCode": "GA",
+      "phoneFormat": "^\\+?241\\d{6}$"
+    },
+    {
+      "countryCode": "CG",
+      "phoneFormat": "^\\+?242\\d{7}$"
+    },
+    {
+      "countryCode": "CD",
+      "phoneFormat": "^\\+?243\\d{7,9}$"
+    },
+    {
+      "countryCode": "AO",
+      "phoneFormat": "^\\+?244\\d{9}$"
+    },
+    {
+      "countryCode": "GW",
+      "phoneFormat": "^\\+?245\\d{7}$"
+    },
+    {
+      "countryCode": "IO",
+      "phoneFormat": "^\\+?246\\d{7}$"
+    },
+    {
+      "countryCode": "AC",
+      "phoneFormat": "^\\+?247\\d{7}$"
+    },
+    {
+      "countryCode": "SC",
+      "phoneFormat": "^\\+?248\\d{7}$"
+    },
+    {
+      "countryCode": "SD",
+      "phoneFormat": "^\\+?249\\d{9}$"
+    },
+    {
+      "countryCode": "RW",
+      "phoneFormat": "^\\+?250\\d{9}$"
+    },
+    {
+      "countryCode": "ET",
+      "phoneFormat": "^\\+?251\\d{9}$"
+    },
+    {
+      "countryCode": "SO",
+      "phoneFormat": "^\\+?252\\d{8}$"
+    },
+    {
+      "countryCode": "DJ",
+      "phoneFormat": "^\\+?253\\d{6}$"
+    },
+    {
+      "countryCode": "KE",
+      "phoneFormat": "^\\+?254\\d{9}$"
+    },
+    {
+      "countryCode": "TZ",
+      "phoneFormat": "^\\+?255\\d{9}$"
+    },
+    {
+      "countryCode": "UG",
+      "phoneFormat": "^\\+?256\\d{9}$"
+    },
+    {
+      "countryCode": "BI",
+      "phoneFormat": "^\\+?257\\d{7}$"
+    },
+    {
+      "countryCode": "MZ",
+      "phoneFormat": "^\\+?258\\d{9}$"
+    },
+    {
+      "countryCode": "ZM",
+      "phoneFormat": "^\\+?260\\d{9}$"
+    },
+    {
+      "countryCode": "MG",
+      "phoneFormat": "^\\+?261\\d{9}$"
+    },
+    {
+      "countryCode": "RE",
+      "phoneFormat": "^\\+?262\\d{9}$"
+    },
+    {
+      "countryCode": "ZW",
+      "phoneFormat": "^\\+?263\\d{9}$"
+    },
+    {
+      "countryCode": "NA",
+      "phoneFormat": "^\\+?264\\d{8}$"
+    },
+    {
+      "countryCode": "MW",
+      "phoneFormat": "^\\+?265\\d{8}$"
+    },
+    {
+      "countryCode": "LS",
+      "phoneFormat": "^\\+?266\\d{8}$"
+    },
+    {
+      "countryCode": "BW",
+      "phoneFormat": "^\\+?267\\d{8}$"
+    },
+    {
+      "countryCode": "SZ",
+      "phoneFormat": "^\\+?268\\d{7}$"
+    },
+    {
+      "countryCode": "KM",
+      "phoneFormat": "^\\+?269\\d{7}$"
+    },
+    {
+      "countryCode": "SH",
+      "phoneFormat": "^\\+?290\\d{4}$"
+    },
+    {
+      "countryCode": "ER",
+      "phoneFormat": "^\\+?291\\d{7}$"
+    },
+    {
+      "countryCode": "AW",
+      "phoneFormat": "^\\+?297\\d{7}$"
+    },
+    {
+      "countryCode": "FO",
+      "phoneFormat": "^\\+?298\\d{6}$"
+    },
+    {
+      "countryCode": "GL",
+      "phoneFormat": "^\\+?299\\d{6}$"
+    }
+  ]
+  
