@@ -38,6 +38,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@tsconfig/react-native": "^3.0.5"
+    "@tsconfig/react-native": "^3.0.5",
+    "react-native-web-hover": "^0.2.9"
   }
 }
