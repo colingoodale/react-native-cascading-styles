@@ -25,13 +25,11 @@ export default function HomeScreen() {
         />
       }>
       <NativeTextInput
-        style={[StyleLibrary.borderM, { borderColor: 'black' }]}
+        style={[StyleLibrary.borderM]}
         placeholder="Enter your name"
         required={true}
         requiredMessage="This field is required"
         emailValidation={true}
-        errorColor='blue'
-        successColor='green'
       />
      <Button label={"Click me"} onPress={() => console.log("Button clicked")} buttonStyle={[StyleLibrary.borderM]} textStyle={[localStyles.buttonText]} />
     </ParallaxScrollView>
