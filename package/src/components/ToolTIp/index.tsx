@@ -1,14 +1,19 @@
 import React, { useState, useCallback } from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { View, Text, StyleSheet, Pressable, ViewStyle, TextStyle } from 'react-native';
 
 interface TooltipProps {
   children: React.ReactNode;
   content?: string;
   customContent?: React.ReactElement;
-  tooltipStyle?: object;
+  tooltipStyle?: ViewStyle;
   trigger?: 'onPress' | 'onLongPress';
   showOnHover?: boolean;
   persistOnHover?: boolean;
+  pressRetentionOffset?: object;
+  hitSlop: object | number;
+  delayLongPress?: number;
+  containerStyle?: ViewStyle;
+  toolTipTextStyle?: TextStyle;
 }
 
 const Tooltip: React.FC<TooltipProps> = ({ 
@@ -18,7 +23,12 @@ const Tooltip: React.FC<TooltipProps> = ({
   tooltipStyle = {}, 
   trigger = 'onLongPress', 
   showOnHover = true, 
-  persistOnHover = false 
+  persistOnHover = false,
+  pressRetentionOffset = { top: 10, left: 10, right: 10, bottom: 10 },
+  hitSlop = 10,
+  delayLongPress = 500,
+  containerStyle = {},
+  toolTipTextStyle = {}, 
 }) => {
   const [visible, setVisible] = useState(false);
 
@@ -44,7 +54,7 @@ const Tooltip: React.FC<TooltipProps> = ({
     }
     return (
       <View style={[styles.tooltip, tooltipStyle]}>
-        <Text>{content}</Text>
+        <Text style={[styles.toolTipText, toolTipTextStyle]}>{content}</Text>
       </View>
     );
   };
@@ -56,7 +66,10 @@ const Tooltip: React.FC<TooltipProps> = ({
       onLongPress={trigger === 'onLongPress' ? showTooltip : null}
       onHoverIn={showOnHover ? showTooltip : undefined}
       onHoverOut={showOnHover && !persistOnHover ? hideTooltip : undefined}
-      style={styles.container}
+      style={[styles.container, containerStyle]}
+      pressRetentionOffset={pressRetentionOffset}
+      hitSlop={hitSlop}
+      delayLongPress={delayLongPress}
     >
       {children}
       {visible && renderTooltipContent()}
@@ -75,6 +88,9 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     zIndex: 1000,
   },
+  toolTipText: {
+    color: 'black',
+  }
 });
 
 export default Tooltip;
