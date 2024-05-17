@@ -1,14 +1,21 @@
 import React, { useState, useCallback } from 'react';
-import { View, Text, StyleSheet, Pressable, Platform } from 'react-native';
-import PropTypes from 'prop-types';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
 
-const Tooltip = ({ 
+interface TooltipProps {
+  children: React.ReactNode;
+  content?: string;
+  customContent?: React.ReactElement;
+  tooltipStyle?: object;
+  trigger?: 'onPress' | 'onLongPress';
+  showOnHover?: boolean;
+  persistOnHover?: boolean;
+}
+
+const Tooltip: React.FC<TooltipProps> = ({ 
   children, 
-  content, 
-  customContent, 
-  tooltipStyle, 
-  webCss, 
-  nativeStyle,
+  content = '', 
+  customContent = null, 
+  tooltipStyle = {}, 
   trigger = 'onLongPress', 
   showOnHover = true, 
   persistOnHover = false 
@@ -42,56 +49,19 @@ const Tooltip = ({
     );
   };
 
-  const baseStyle = [styles.container];
-  const appliedStyle = Platform.OS === 'web' ? webCss : nativeStyle;
-
-  if (Platform.OS === 'web' && webCss) {
-    return (
-      <View
-        onMouseEnter={showOnHover ? showTooltip : null}
-        onMouseLeave={showOnHover && !persistOnHover ? hideTooltip : null}
-        style={[...baseStyle, appliedStyle]}
-      >
-        {children}
-        {visible && renderTooltipContent()}
-      </View>
-    );
-  }
-
   return (
     <Pressable
       onPressIn={trigger === 'onPress' ? showTooltip : null}
       onPressOut={trigger === 'onPress' ? hideTooltip : null}
       onLongPress={trigger === 'onLongPress' ? showTooltip : null}
-      style={[...baseStyle, appliedStyle]}
+      onHoverIn={showOnHover ? showTooltip : undefined}
+      onHoverOut={showOnHover && !persistOnHover ? hideTooltip : undefined}
+      style={styles.container}
     >
       {children}
       {visible && renderTooltipContent()}
     </Pressable>
   );
-};
-
-Tooltip.propTypes = {
-  children: PropTypes.node.isRequired,
-  content: PropTypes.string,
-  customContent: PropTypes.element,
-  tooltipStyle: PropTypes.object,
-  webCss: PropTypes.object, // For web-specific CSS
-  nativeStyle: PropTypes.object, // For native-specific styles
-  trigger: PropTypes.oneOf(['onPress', 'onLongPress']),
-  showOnHover: PropTypes.bool,
-  persistOnHover: PropTypes.bool,
-};
-
-Tooltip.defaultProps = {
-  content: '',
-  customContent: null,
-  tooltipStyle: {},
-  webCss: null,
-  nativeStyle: {},
-  trigger: 'onLongPress',
-  showOnHover: true,
-  persistOnHover: false,
 };
 
 const styles = StyleSheet.create({
