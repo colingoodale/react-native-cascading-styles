@@ -4,6 +4,7 @@ import { Image, StyleSheet, Platform, View } from 'react-native';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { Button, Tooltip, DropdownSelect, StyleLibrary } from 'react-native-cascading-styles'
 
+
 const localStyles = StyleSheet.create({
   buttonText: {
     fontSize: 20,
@@ -19,19 +20,7 @@ export default function HomeScreen() {
   const [selectedValue, setSelectedValue] = useState('');
 
   return (
-    <>
-      <DropdownSelect
-        options={[
-          { label: 'Option 1', value: '1' },
-          { label: 'Option 2', value: '2' },
-          { label: 'Option 3', value: '3' },
-        ]}
-        onValueChange={(value) => {
-          console.log(value)
-          setSelectedValue(value)
-        }}
-      />
-    </>
+      <></>
   );
 }
 
