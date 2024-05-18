@@ -1,7 +1,11 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, View } from 'react-native';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
+<<<<<<< HEAD
 import { Button, NativeTextInput, StyleLibrary } from 'react-native-cascading-styles'
+=======
+import { Button, Tooltip, StyleLibrary } from 'react-native-cascading-styles'
+>>>>>>> 9dd2ff4abafcfd874e12104e5fa4ae2aa7048375
 
 const localStyles = StyleSheet.create({
   buttonText: {
@@ -16,6 +20,7 @@ const localStyles = StyleSheet.create({
 
 export default function HomeScreen() {
   return (
+<<<<<<< HEAD
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
@@ -33,6 +38,11 @@ export default function HomeScreen() {
       />
      <Button label={"Click me"} onPress={() => console.log("Button clicked")} buttonStyle={[StyleLibrary.borderM]} textStyle={[localStyles.buttonText]} />
     </ParallaxScrollView>
+=======
+    <>
+      
+    </>
+>>>>>>> 9dd2ff4abafcfd874e12104e5fa4ae2aa7048375
   );
 }
 
