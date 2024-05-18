@@ -1,7 +1,7 @@
 export { default as Button } from './Button';
-export { default as TextInput } from './TextInput';
+export { default as NativeTextInput } from './NativeTextInput';
 import { default as Tooltip } from './Tooltip';
 
 export type { ButtonProps } from './Button';
-export type { TextInputProps } from './TextInput';
+export type { TextInputProps } from './NativeTextInput';
 export type { TooltipProps } from './Tooltip';
