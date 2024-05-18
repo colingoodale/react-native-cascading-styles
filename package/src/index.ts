@@ -3,3 +3,4 @@ export { default as Button } from './components/Button';
 export { default as Tooltip } from './components/Tooltip';
 export { default as DropdownSelect } from './components/DropdownSelect';
 export { default as NativeTextInput } from './components/NativeTextInput';
+export { default as Checkbox } from './components/Checkbox';

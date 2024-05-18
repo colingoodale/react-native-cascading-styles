@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Pressable, View, Text, StyleSheet, Animated } from 'react-native';
 
-interface CheckboxProps {
+export interface CheckboxProps {
   style?: object;
   animationType?: 'spring' | 'timing';
   highlightColor?: string;
