@@ -4,6 +4,7 @@ import { View, Text, FlatList, Pressable, StyleSheet, StyleProp, ViewStyle, Text
 export interface DropdownSelectProps {
   options: { label: string, value: string }[];
   onValueChange: (value: string) => void;
+  preSelectMessage?: string;
   selectedValue?: string;
   containerStyle?: StyleProp<ViewStyle>;
   itemStyle?: StyleProp<ViewStyle>;
@@ -15,7 +16,8 @@ export interface DropdownSelectProps {
 const DropdownSelect: React.FC<DropdownSelectProps> = ({ 
     options, 
     onValueChange, 
-    selectedValue, 
+    selectedValue,
+    preSelectMessage = 'Select an option', 
     containerStyle = {}, 
     itemStyle = {}, 
     textStyle = {}, 
@@ -40,7 +42,7 @@ const DropdownSelect: React.FC<DropdownSelectProps> = ({
   return (
     <View style={[styles.container, containerStyle]}>
       <Pressable style={[styles.trigger, triggerStyle]} onPress={() => setDropdownVisible(!dropdownVisible)}>
-        <Text>{selectedValue || 'Select an option'}</Text>
+        <Text>{selectedValue || preSelectMessage}</Text>
       </Pressable>
       {dropdownVisible && (
         <View style={styles.dropdownView}>

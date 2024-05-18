@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Image, StyleSheet, Platform, View } from 'react-native';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -15,6 +16,8 @@ const localStyles = StyleSheet.create({
 
 
 export default function HomeScreen() {
+  const [selectedValue, setSelectedValue] = useState('');
+
   return (
     <>
       <DropdownSelect
@@ -23,7 +26,10 @@ export default function HomeScreen() {
           { label: 'Option 2', value: '2' },
           { label: 'Option 3', value: '3' },
         ]}
-        onValueChange={(value) => console.log(value)}
+        onValueChange={(value) => {
+          console.log(value)
+          setSelectedValue(value)
+        }}
       />
     </>
   );
