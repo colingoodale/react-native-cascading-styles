@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Platform, View } from 'react-native';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { Button, Tooltip, StyleLibrary } from 'react-native-cascading-styles'
+import { Button, Tooltip, DropdownSelect, StyleLibrary } from 'react-native-cascading-styles'
 
 const localStyles = StyleSheet.create({
   buttonText: {
@@ -17,7 +17,14 @@ const localStyles = StyleSheet.create({
 export default function HomeScreen() {
   return (
     <>
-      
+      <DropdownSelect
+        options={[
+          { label: 'Option 1', value: '1' },
+          { label: 'Option 2', value: '2' },
+          { label: 'Option 3', value: '3' },
+        ]}
+        onValueChange={(value) => console.log(value)}
+      />
     </>
   );
 }

@@ -1,41 +1,56 @@
 import React, { useState } from 'react';
-import { View, Modal, Text, FlatList, Pressable, StyleSheet } from 'react-native';
+import { View, Text, FlatList, Pressable, StyleSheet, StyleProp, ViewStyle, TextStyle } from 'react-native';
 
-export interface SelectProps {
+export interface DropdownSelectProps {
   options: { label: string, value: string }[];
   onValueChange: (value: string) => void;
   selectedValue?: string;
-  style?: object;
+  containerStyle?: StyleProp<ViewStyle>;
+  itemStyle?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
+  triggerStyle?: StyleProp<ViewStyle>;
+  renderItem?: React.ComponentType<any>;
 }
 
-const Select: React.FC<SelectProps> = ({ options, onValueChange, selectedValue, style = {} }) => {
-  const [modalVisible, setModalVisible] = useState(false);
+const DropdownSelect: React.FC<DropdownSelectProps> = ({ 
+    options, 
+    onValueChange, 
+    selectedValue, 
+    containerStyle = {}, 
+    itemStyle = {}, 
+    textStyle = {}, 
+    triggerStyle = {},
+    renderItem 
+}) => {
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleSelect = (value: string) => {
-    setModalVisible(false);
+    setDropdownVisible(false);
     onValueChange(value);
   };
 
+  const defaultRenderItem = ({ item }: { item: { label: string, value: string } }) => (
+    <Pressable style={[styles.item, itemStyle]} onPress={() => handleSelect(item.value)}>
+      <Text style={[styles.text, textStyle]}>{item.label}</Text>
+    </Pressable>
+  );
+
+  const RenderItemComponent = renderItem || defaultRenderItem;
+
   return (
-    <View style={[styles.container, style]}>
-      <Pressable onPress={() => setModalVisible(true)}>
+    <View style={[styles.container, containerStyle]}>
+      <Pressable style={[styles.trigger, triggerStyle]} onPress={() => setDropdownVisible(!dropdownVisible)}>
         <Text>{selectedValue || 'Select an option'}</Text>
       </Pressable>
-      <Modal animationType="slide" transparent={true} visible={modalVisible}>
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <FlatList
-              data={options}
-              keyExtractor={(item) => item.value}
-              renderItem={({ item }) => (
-                <Pressable onPress={() => handleSelect(item.value)}>
-                  <Text style={styles.modalText}>{item.label}</Text>
-                </Pressable>
-              )}
-            />
-          </View>
+      {dropdownVisible && (
+        <View style={styles.dropdownView}>
+          <FlatList
+            data={options}
+            keyExtractor={(item) => item.value}
+            renderItem={(props) => <RenderItemComponent {...props} />}
+          />
         </View>
-      </Modal>
+      )}
     </View>
   );
 };
@@ -46,18 +61,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 10,
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
+  trigger: {
     backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
+    padding: 10,
+    borderRadius: 5,
+  },
+  dropdownView: {
+    marginTop: 10,
+    backgroundColor: 'white',
+    borderRadius: 5,
+    padding: 10,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -67,10 +80,14 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
   },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
+  item: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+  },
+  text: {
+    fontSize: 16,
   },
 });
 
-export default Select;
+export default DropdownSelect;
