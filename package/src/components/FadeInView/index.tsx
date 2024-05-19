@@ -28,11 +28,11 @@ const FadeView: React.FC<FadeViewProps> = ({
 
   useEffect(() => {
     if (fadeInOnMount) {
-      fadeIn(duration, delay, inValue);
+      fadeIn(duration, delay);
     }
     return () => {
       if (fadeOutOnUnmount) {
-        fadeOut(duration, delay, outValue);
+        fadeOut(duration, delay);
       }
     };
   }, [duration, delay, fadeInOnMount, fadeOutOnUnmount, inValue, outValue, fadeIn, fadeOut]);
