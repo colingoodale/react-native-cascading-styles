@@ -24,6 +24,7 @@ export type TextInputProps = {
   accessibilityHint?: string; // New prop for setting the accessibility hint
   successColor?: string; // New prop for setting the success color
   errorColor?: string; // New prop for setting the error color
+  listenToChange: (text: string) => void; // New prop for listening to the text
 } & React.ComponentProps<typeof TextInput>;
 
 // Default styles for the TextInput component
@@ -63,6 +64,7 @@ const NativeTextInput = ({
   accessibilityHint,
   successColor = "green",
   errorColor = 'red',
+  listenToChange,
   ...props
 }: TextInputProps) => {
   const [isValid, setIsValid] = useState(true); // State to track validation
@@ -178,7 +180,10 @@ const NativeTextInput = ({
           style
         ]}
         testID={testId ? testId : "default"}
-        onChangeText={handleChangeText} // Validate on text change
+        onChangeText={(newText) => {
+          handleChangeText(newText);
+          listenToChange(newText);
+        }} // Validate on text change
         editable={!disabled} // Set TextInput as editable or not based on the disabled prop
         {...props}
       />

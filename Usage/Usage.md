@@ -33,14 +33,6 @@ For more detailed information and examples on using the StyleLibrary, refer to t
 
 Our component library is designed to provide developers with a collection of flexible and reusable components for building user interfaces. With a focus on simplicity and extensibility, our components offer minimal default styles while providing maximum functionality, making them suitable for a wide range of projects.
 
-### Components Included
-
-- **Button**: A customizable button component for triggering actions or navigation.
-- **NativeTextInput**: A text input component with support for various validation options.
-- **Tooltip**: A tooltip component for displaying additional information or context.
-- **DropdownSelect**: A dropdown select component for selecting options from a list.
-- **Checkbox**: A checkbox component for allowing users to make selections.
-
 ### Usage Example: Creating a Form
 
 ```jsx
@@ -63,27 +55,29 @@ const Form = () => {
   };
 
   return (
-    <View style={localStyles.formContainer}>
+    <View style={[ StyleLibrary.alignCenter, StyleLibrary.justifyCenter localStyles.formContainer]}>
       <NativeTextInput
-        style={localStyles.input}
+        style={[]}
         placeholder="Email"
-        required
-        validationRegex={/^\S+@\S+\.\S+$/}
-        onChangeText={handleEmailChange}
+        required={}true
+        emailValidation={true}
+        listenToChange={handleEmailChange}
+        requiredMessage={"Email is required"}
       />
       <NativeTextInput
         style={localStyles.input}
         placeholder="Password"
-        required
-        validationRegex={/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/}
-        onChangeText={handlePasswordChange}
+        required={true}
+        passwordValidation={true}
+        listenToChange={handlePasswordChange}
         secureTextEntry
+        requiredMessage={"Ensure that your password has more than 8 characters and uses at least one number and one character"}
       />
       <Button
         onPress={handleSubmit}
         label="Submit"
         buttonStyle={localStyles.submitButton}
-        textStyle={localStyles.submitButtonText}
+        textStyle={[StyleLibrary.fontSizeM, { color: 'black' }]}
       />
     </View>
   );
@@ -92,26 +86,20 @@ const Form = () => {
 const localStyles = StyleSheet.create({
   formContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
-  input: {
-    width: '80%',
-    marginBottom: 20,
-    padding: 10,
-    borderWidth: 1,
-    borderColor: StyleLibrary.colors.primary,
-    borderRadius: 5,
+  input: {[
+    StyleLibrary.marginBottomL,
+    Stylelibrary.paddingS,
+    StyleLibrary.borderXS,
+    StyleLibrary.borderRadiusS,
+    {width: '80%'}
+  ],
   },
-  submitButton: {
-    backgroundColor: StyleLibrary.colors.primary,
-    padding: 10,
-    borderRadius: 5,
-  },
-  submitButtonText: {
-    color: 'white',
-    fontSize: 16,
-  },
+  submitButton: {[
+    StyleLibrary.borderRadiusS,
+    StyleLibnrary.paddingS,
+    {backgroundColor: 'white'}
+  ]}
 });
 
 export default Form;
