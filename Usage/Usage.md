@@ -1,8 +1,10 @@
 # API Usage
 
-## StyleLibrary
+## StyleLibrary 
 
 The StyleLibrary from the react-native-cascading-styles package provides a convenient way to access and apply predefined styles in React Native applications. It simplifies the process of styling components by offering a collection of commonly used styles such as flex layouts, text styles, and more.
+
+[Style Library Reference](./StyleLibraryReference.md)
 
 To utilize the StyleLibrary in your project:
 
@@ -32,6 +34,8 @@ For more detailed information and examples on using the StyleLibrary, refer to t
 ## Component Library Overview
 
 Our component library is designed to provide developers with a collection of flexible and reusable components for building user interfaces. With a focus on simplicity and extensibility, our components offer minimal default styles while providing maximum functionality, making them suitable for a wide range of projects.
+
+[Component Library Reference](./Component_Usage.md)
 
 ### Usage Example: Creating a Form
 
