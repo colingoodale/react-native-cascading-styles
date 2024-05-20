@@ -28,3 +28,9 @@ package/dist
 
 # ignore packed files
 **/*.tgz
+
+# Ignore coverage files
+coverage/
+
+# Ignore test app
+package/test-app
