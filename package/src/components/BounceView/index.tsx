@@ -3,7 +3,7 @@ import React, { useEffect, ReactNode } from 'react';
 import { Animated, StyleProp, ViewStyle } from 'react-native';
 import { useBounce } from '../../hooks';
 
-interface BounceViewProps {
+export interface BounceViewProps {
   children: ReactNode;
   style?: StyleProp<ViewStyle>;
   toValue: number;

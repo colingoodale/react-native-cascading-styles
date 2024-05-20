@@ -3,7 +3,7 @@ import React, { useEffect, ReactNode } from 'react';
 import { Animated, StyleProp, ViewStyle } from 'react-native';
 import { useStagger } from '../../hooks';
 
-interface StaggerViewProps {
+export interface StaggerViewProps {
   children: ReactNode[];
   style?: StyleProp<ViewStyle>;
   toValue: number;

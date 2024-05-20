@@ -21,3 +21,18 @@ export { default as FadeView } from './components/FadeView';
 export { default as RotateView } from './components/RotateView';
 export { default as SlideView } from './components/SlideView';
 export { default as StaggerView } from './components/StaggerView';
+
+//Animation Component Types
+export type { BounceViewProps } from './components';
+export type { FadeViewProps } from './components';
+export type { RotateViewProps } from './components';
+export type { SlideViewProps } from './components';
+export type { StaggerViewProps } from './components';
+
+//Component Types
+export type { ButtonProps } from './components';
+export type { TooltipProps } from './components';
+export type { DropdownSelectProps } from './components';
+export type { TextInputProps } from './components';
+export type { CheckboxProps } from './components';
+

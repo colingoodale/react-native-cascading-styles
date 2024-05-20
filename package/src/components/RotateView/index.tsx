@@ -3,7 +3,7 @@ import React, { useEffect, ReactNode } from 'react';
 import { Animated, StyleProp, ViewStyle } from 'react-native';
 import { useRotate } from '../../hooks';
 
-interface RotateViewProps {
+export interface RotateViewProps {
   children: ReactNode;
   style?: StyleProp<ViewStyle>;
   toValue: number;
