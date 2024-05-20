@@ -1,10 +1,10 @@
 {
   "name": "react-native-cascading-styles",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This is a StyleSheet library that provides users with a StyleLibrary that mimics modern class based styles with CSS. This package also delivers a 'barely styled' component library, built with the same cascading style \"classes\".",
   "main": "dist/index.js",
   "scripts": {
-    "_postinstall": "husky install",
+    "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
     "build": "tsc",
@@ -12,6 +12,11 @@
   },
   "author": "Colin Goodale",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colingoodale/react-native-cascading-styles/tree/main"
+  },
+  "homepage": "https://github.com/colingoodale/react-native-cascading-styles/tree/main",
   "publishConfig": {
     "access": "public"
   },

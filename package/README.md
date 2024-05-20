@@ -10,7 +10,7 @@ And let's not forget about animations! With our hooks, you'll wield unparalleled
 
 So why juggle multiple libraries when you can have it all with react-native-cascading-styles? Say goodbye to complexity and hello to seamless development. With our comprehensive solution, you'll conquer React Native like a pro, delivering stunning apps with confidence and ease. Try it out today and experience the difference for yourself! ✨
 
-For more documentation on usage, go here [Usage](./Usage/Usage.md)
+For more documentation on usage, go here [Usage](https://github.com/colingoodale/react-native-cascading-styles/tree/main/Usage)
 
 ## Installation
 ```sh
