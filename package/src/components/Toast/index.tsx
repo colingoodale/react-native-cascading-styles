@@ -15,6 +15,8 @@ type ToastProps = {
   onHoverOut?: () => void;
   renderLeadingIcon?: () => JSX.Element;
   renderTrailingIcon?: () => JSX.Element;
+  slideDuration?: number;
+  fadeDuration?: number;
 };
 
 const Toast: React.FC<ToastProps> = ({
@@ -33,6 +35,8 @@ const Toast: React.FC<ToastProps> = ({
   onHoverOut,
   renderLeadingIcon,
   renderTrailingIcon,
+  slideDuration = 300,
+  fadeDuration = 300,
 }) => {
   const RenderItem = renderItem;
   const { opacity, fadeIn, fadeOut } = useFade(0);
@@ -47,23 +51,23 @@ const Toast: React.FC<ToastProps> = ({
 
   const handleHoverOut = () => {
     timer.current = setTimeout(() => {
-      fadeOut(300, 0, () => slideOut(1, 300));
+      fadeOut(fadeDuration, 0, () => slideOut(1, slideDuration));
     }, duration);
     if (onHoverOut) onHoverOut();
   };
 
   useEffect(() => {
-    slideIn(1, 300, 0, () => {
-      fadeIn(300);
+    slideIn(1, slideDuration, 0, () => {
+      fadeIn(fadeDuration);
       timer.current = setTimeout(() => {
-        fadeOut(300, 0, () => slideOut(1, 300));
+        fadeOut(fadeDuration, 0, () => slideOut(1, slideDuration));
       }, duration);
     });
 
     return () => {
       if (timer.current) clearTimeout(timer.current);
     };
-  }, [fadeIn, fadeOut, slideIn, slideOut, duration]);
+  }, [fadeIn, fadeOut, slideIn, slideOut, duration, slideDuration, fadeDuration]);
 
   return (
     <Pressable 
