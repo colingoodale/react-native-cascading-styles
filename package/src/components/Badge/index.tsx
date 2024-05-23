@@ -1,16 +1,34 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Pressable, Text, StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
 interface BadgeProps {
-  value: number;
+  value: number | string;
   color?: string;
+  onPress?: () => void;
+  onHoverIn?: () => void;
+  onHoverOut?: () => void;
+  badgeStyle?: ViewStyle;
+  textStyle?: TextStyle;
 }
 
-const Badge: React.FC<BadgeProps> = ({ value, color = 'red' }) => {
+const Badge: React.FC<BadgeProps> = ({
+  value,
+  color = 'red',
+  onPress = () => {},
+  onHoverIn = () => {},
+  onHoverOut = () => {},
+  badgeStyle = {},
+  textStyle = {},
+}) => {
   return (
-    <View style={[styles.badge, { backgroundColor: color }]}>
-      <Text style={styles.text}>{value}</Text>
-    </View>
+    <Pressable
+      onPress={onPress}
+      onHoverIn={onHoverIn}
+      onHoverOut={onHoverOut}
+      style={[styles.badge, { backgroundColor: color }, badgeStyle]}
+    >
+      <Text style={[styles.text, textStyle]}>{value}</Text>
+    </Pressable>
   );
 };
 
